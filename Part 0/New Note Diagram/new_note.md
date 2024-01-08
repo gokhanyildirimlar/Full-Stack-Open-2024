@@ -9,6 +9,11 @@ sequenceDiagram
 
     Note right of browser: The browser sends form data to the server on submit and reloads the page /exampleapp/notes
 
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML Document
+    deactivate server
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
     server-->>browser: Main CSS File
